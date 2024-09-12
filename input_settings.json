@@ -2,5 +2,6 @@
     "watermark_text": "AYLSWORTH",
     "watermark_opacity": 0.3,
     "compression_quality": 50,
-    "max_image_width": 1200
+    "max_image_width": 1200,
+    "filename_prefix": "aylsworth"
 }

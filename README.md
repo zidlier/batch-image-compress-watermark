@@ -22,7 +22,8 @@ Update the `input_settings.json` file to configure the watermark text, opacity, 
     "watermark_text": "AYLSWORTH",
     "watermark_opacity": 0.3,
     "compression_quality": 50,
-    "max_image_width": 1200
+    "max_image_width": 1200,
+    "filename_prefix": "aylsworth"
 }
 ```
 
@@ -31,5 +32,6 @@ Update the `input_settings.json` file to configure the watermark text, opacity, 
 * __watermark_opacity__: The opacity of the watermark text, ranging from 0 (completely transparent) to 1 (completely opaque).
 * __compression_quality__: The quality of the image compression, ranging from 0 (lowest quality, highest compression) to 100 (highest quality, lowest compression).
 * __max_image_width__: The maximum width of the resized images in pixels. Images wider than this value will be resized to this width while maintaining the aspect ratio.
+* __filename_prefix__: (Optional) if needed to save the files to indexed file name e.g. `aylsworth_1.png`
 
 Created with the use of Github Copilot

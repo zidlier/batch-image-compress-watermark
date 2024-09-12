@@ -28,10 +28,11 @@ function resizeAndCompressImages(inputDir, outputDir, watermarkText, opacity) {
             return;
         }
 
-        files.forEach(file => {
+        files.forEach((file, index) => {
             const inputFile = path.join(inputDir, file);
-            const outputFile = path.join(outputDir, file);
-
+            let file_extension = file.split('.').pop();
+            const outputFile = (filename_prefix && filename_prefix !== "") ? path.join(outputDir, `${filename_prefix}_${index+1}.${file_extension}`) : path.join(outputDir, file)
+            
             if (file.endsWith('.png') || file.endsWith('.jpg')) {
                 addWatermark(inputFile, outputFile, watermarkText, opacity, 100, 'white');
             }
@@ -46,9 +47,9 @@ const {
     watermark_opacity, 
     watermark_text, 
     compression_quality, 
-    max_image_width
+    max_image_width,
+    filename_prefix
 } = require('./input_settings.json')
-
 
 const compressionQuality = compression_quality
 const maxWidth = max_image_width
